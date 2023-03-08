@@ -1,5 +1,5 @@
 import { useCallback, useContext } from 'react';
-import { LOCAL_STORAGE_KEY_THEME, Theme, ThemeContext } from 'shared/context';
+import { LOCAL_STORAGE_KEY_THEME, Theme, ThemeContext } from 'shared/context/ThemeContext';
 
 type TUseThemeResult = [
   Theme,

@@ -8,6 +8,7 @@ export function devServerBuilder({ port = 9000 }: IBuilderOptions): DevServerCon
         client: {
             overlay: true,
             progress: true
-        }
+        },
+        historyApiFallback: true
     };
 }

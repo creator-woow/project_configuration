@@ -2,6 +2,7 @@ import path from 'path';
 import { configBuilder, IPaths, IEnvOptions } from './config/webpack';
 
 const paths: IPaths = {
+    src: path.resolve(__dirname, 'src'),
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: path.resolve(__dirname, 'build'),
     indexHTML: path.resolve(__dirname, 'public', 'index.html')

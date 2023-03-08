@@ -19,7 +19,7 @@ const configBuilder = (options: IBuilderOptions): webpack.Configuration => {
         module: {
             rules: loadersBuilder(options),
         },
-        resolve: resolveBuilder(),
+        resolve: resolveBuilder(options),
         plugins: pluginsBuilder(options),
         devServer: isDev ? devServerBuilder(options) : undefined
     };

@@ -1,0 +1,16 @@
+@import './reset';
+@import './variables';
+@import './themes';
+
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    font: var(--font-m);
+    color: var(--font-color-primary);
+    background-color: var(--bg-color);
+}

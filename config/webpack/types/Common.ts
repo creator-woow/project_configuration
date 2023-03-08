@@ -1,6 +1,7 @@
 type TBuildMode = 'production' | 'development';
 
 export interface IPaths {
+    src: string;
     entry: string;
     output: string;
     indexHTML: string;

@@ -1,0 +1,25 @@
+{
+	"base-component-structure": {
+		"description": "Snippet for creating default structure of a react component",
+		"prefix": ["component", "rc"],
+		"body": [
+			"import { FC } from 'react'",
+			"import { cn } from 'shared/utils/classNames'",
+			"import cls from './${TM_FILENAME_BASE}.module.scss'",
+			"",
+			"interface I${TM_FILENAME_BASE}Props {",
+			"\tclassName?: string;",
+			"}",
+			"",
+			"export const ${TM_FILENAME_BASE}: FC<I${TM_FILENAME_BASE}Props> = (props) => {",
+			"\tconst { className } = props;",
+			"\treturn (",
+			"\t\t<div className={cn(${1:mainClass}, {}, [className])}>",
+			"\t\t\t${0:body}",
+			"\t\t</div>",
+			"\t);",
+			"};",
+			""
+		]
+	}
+}

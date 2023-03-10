@@ -1,11 +1,11 @@
 import { FC, useMemo } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { getAppRoutes } from '../lib/helpers';
+import { routes } from '../lib/routes';
 
 export const AppRouter: FC = () => {
 
   const router = useMemo(() => {
-    return createBrowserRouter(getAppRoutes());
+    return createBrowserRouter(routes);
   }, [])
 
   return (

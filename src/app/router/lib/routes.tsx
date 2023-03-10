@@ -1,19 +1,21 @@
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
+import { RootPage } from 'pages/RootPage';
 import { RouteObject } from 'react-router-dom';
 
-export enum AppRoute {
-  MAIN = 'main',
-  ABOUT = 'about',
-}
-
-export const routes: Record<AppRoute, RouteObject> = {
-  [AppRoute.MAIN]: {
+export const routes: RouteObject[] = [
+  {
     path: '/',
-    element: <MainPage />,
-  },
-  [AppRoute.ABOUT]: {
-    path: '/about',
-    element: <AboutPage />,
+    element: <RootPage />,
+    children: [
+      {
+        path: 'main',
+        element: <MainPage />
+      },
+      {
+        path: 'about',
+        element: <AboutPage />
+      }
+    ]
   }
-};
+];

@@ -12,8 +12,10 @@
   width: var(--sidebar-width-expanded);
 }
 
-.changers {
+.switchers {
   display: flex;
   margin-top: auto;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }

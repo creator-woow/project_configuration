@@ -1,6 +1,7 @@
 import { FC, useCallback, useState } from 'react'
 import { cn } from 'shared/utils/classNames'
-import { ThemeChanger } from 'widgets/ThemeChanger';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
 import cls from './Sidebar.module.scss'
 import { Button } from 'shared/ui/Button';
 
@@ -19,8 +20,9 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
       <Button onClick={toggleExpanded}>
         t
       </Button>
-      <div className={cls.changers}>
-        <ThemeChanger />
+      <div className={cls.switchers}>
+        <ThemeSwitcher />
+        <LangSwitcher />
       </div>
     </aside>
   );

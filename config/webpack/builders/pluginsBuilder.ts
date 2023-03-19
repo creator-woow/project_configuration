@@ -16,5 +16,6 @@ export function pluginsBuilder({ paths, isDev }: IBuilderOptions): webpack.Webpa
         new webpack.DefinePlugin({
             __IS_DEV__: isDev
         }),
+        new webpack.HotModuleReplacementPlugin(),
     ];
 }

@@ -5,6 +5,7 @@ export function devServerBuilder({ port = 9000 }: IBuilderOptions): DevServerCon
     return {
         port,
         open: true,
+        hot: true,
         client: {
             overlay: true,
             progress: true

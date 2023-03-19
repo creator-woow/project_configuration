@@ -1,19 +1,18 @@
 import { FC } from 'react'
 import { NavBar } from 'widgets/NavBar/ui/NavBar';
 import { Outlet } from 'react-router-dom';
+import { Sidebar } from 'widgets/Sidebar';
 
-interface IRootPageProps {
-  className?: string;
-}
-
-export const RootPage: FC<IRootPageProps> = (props) => {
-  const { className } = props;
+export const RootPage: FC = () => {
   return (
     <>
       <NavBar />
-      <main>
-        <Outlet />
-      </main>
+      <div className='page-content-wrapper'>
+        <Sidebar />
+        <main className='page-content'>
+          <Outlet />
+        </main>
+      </div>
     </>
   );
 };

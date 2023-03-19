@@ -24,7 +24,7 @@ export const ThemeChanger: FC<IThemeChangerProps> = (props) => {
       className={cn(cls.changer, {}, [className])}
       onClick={toggleTheme}
     >
-      {theme === Theme.NORMAL ? <LightIcon /> : <DarkIcon />}
+      {theme === Theme.NORMAL ? <DarkIcon /> : <LightIcon />}
     </Button>
   );
 };

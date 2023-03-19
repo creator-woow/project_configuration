@@ -1,0 +1,19 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--navbar-height));
+  transition: width ease .3s;
+  background-color: var(--bg-color-contrast);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.expanded {
+  width: var(--sidebar-width-expanded);
+}
+
+.changers {
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+}

@@ -14,6 +14,7 @@ const configBuilder = (options: IBuilderOptions): webpack.Configuration => {
         output: {
             filename: '[name].[contenthash].js',
             path: paths.output,
+            assetModuleFilename: 'images/[hash][ext][query]',
             clean: true
         },
         module: {

@@ -6,7 +6,7 @@ export const AppRouter: FC = () => {
 
   const router = useMemo(() => {
     return createBrowserRouter(routes);
-  }, [])
+  }, []);
 
   return (
     <RouterProvider router={router} />

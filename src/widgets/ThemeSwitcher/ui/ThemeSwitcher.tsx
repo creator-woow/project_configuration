@@ -1,11 +1,11 @@
-import { FC, useCallback } from 'react'
-import { cn } from 'shared/utils/classNames'
+import { FC, useCallback } from 'react';
+import { cn } from 'shared/utils/classNames';
 import { Button } from 'shared/ui/Button';
 import { useTheme } from 'shared/hooks/useTheme';
 import { Theme } from 'shared/context/ThemeContext';
 import LightIcon from 'shared/assets/icons/icon-theme-light.svg';
 import DarkIcon from 'shared/assets/icons/icon-theme-dark.svg';
-import cls from './ThemeSwitcher.module.scss'
+import cls from './ThemeSwitcher.module.scss';
 
 interface IThemeSwitcherProps {
   className?: string;

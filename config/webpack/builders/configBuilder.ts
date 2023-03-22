@@ -5,25 +5,25 @@ import { resolveBuilder } from './resolveBuilder';
 import { devServerBuilder } from './devServerBuilder';
 import { IBuilderOptions } from '../types/Common';
 
-const configBuilder = (options: IBuilderOptions): webpack.Configuration => {
-    const { mode, paths, isDev } = options;
-    return {
-        mode: mode,
-        entry: paths.entry,
-        devtool: isDev ? 'inline-source-map' : undefined,
-        output: {
-            filename: '[name].[contenthash].js',
-            path: paths.output,
-            assetModuleFilename: 'images/[hash][ext][query]',
-            clean: true
-        },
-        module: {
-            rules: loadersBuilder(options),
-        },
-        resolve: resolveBuilder(options),
-        plugins: pluginsBuilder(options),
-        devServer: isDev ? devServerBuilder(options) : undefined
-    };
+const configBuilder = (options:IBuilderOptions): webpack.Configuration => {
+  const { mode, paths, isDev } = options;
+  return {
+    mode: mode,
+    entry: paths.entry,
+    devtool: isDev ? 'inline-source-map' : undefined,
+    output: {
+      filename: '[name].[contenthash].js',
+      path: paths.output,
+      assetModuleFilename: 'images/[hash][ext][query]',
+      clean: true
+    },
+    module: {
+      rules: loadersBuilder(options),
+    },
+    resolve: resolveBuilder(options),
+    plugins: pluginsBuilder(options),
+    devServer: isDev ? devServerBuilder(options) : undefined
+  };
 };
 
 export { configBuilder };

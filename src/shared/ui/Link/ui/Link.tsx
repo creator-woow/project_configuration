@@ -1,7 +1,7 @@
-import { FC, PropsWithChildren } from 'react'
+import { FC, PropsWithChildren } from 'react';
 import { Link as RouterDomLink, LinkProps as IRouterDomLinkProps } from 'react-router-dom';
-import { cn } from 'shared/utils/classNames'
-import cls from './Link.module.scss'
+import { cn } from 'shared/utils/classNames';
+import cls from './Link.module.scss';
 
 export enum LinkView {
   OUTLINED = 'outlined',

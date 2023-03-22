@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 import { NavBar } from 'widgets/NavBar/ui/NavBar';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from 'widgets/Sidebar';

@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { FC } from 'react';
 import { Link } from 'shared/ui/Link';
-import { cn } from 'shared/utils/classNames'
-import cls from './NavBar.module.scss'
+import { cn } from 'shared/utils/classNames';
+import cls from './NavBar.module.scss';
 import { useTranslation } from 'react-i18next';
 
 interface INavBarProps {

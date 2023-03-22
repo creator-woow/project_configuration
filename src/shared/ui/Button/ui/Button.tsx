@@ -1,6 +1,6 @@
-import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
-import { cn } from 'shared/utils/classNames'
-import cls from './Button.module.scss'
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
+import { cn } from 'shared/utils/classNames';
+import cls from './Button.module.scss';
 
 export enum ButtonView {
   CLEAR = 'clear'

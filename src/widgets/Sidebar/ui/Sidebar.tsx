@@ -1,8 +1,8 @@
-import { FC, useCallback, useState } from 'react'
-import { cn } from 'shared/utils/classNames'
+import { FC, useCallback, useState } from 'react';
+import { cn } from 'shared/utils/classNames';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
-import cls from './Sidebar.module.scss'
+import cls from './Sidebar.module.scss';
 import { Button } from 'shared/ui/Button';
 
 interface ISidebarProps {
@@ -16,7 +16,7 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
   const toggleExpanded = useCallback(() => setExpanded((prevState) => !prevState), []);
 
   return (
-    <aside className={cn(cls.sidebar, {[cls.expanded]: expanded}, [className])}>
+    <aside className={cn(cls.sidebar, { [cls.expanded]: expanded }, [className])}>
       <Button onClick={toggleExpanded}>
         t
       </Button>

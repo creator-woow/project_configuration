@@ -13,7 +13,7 @@ export function classNames(
     mainClasses,
     ...activeDynamicClasses,
     ...additionalClasses
-  ].join(' ')
+  ].join(' ');
 }
 
 export { classNames as cn };

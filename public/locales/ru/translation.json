@@ -2,5 +2,8 @@
   "navigation": {
     "main-page": "Главная",
     "about-page": "О нас"
+  },
+  "error": {
+    "page-not-found": "Страница не найдена"
   }
 }

@@ -3,9 +3,9 @@
 		"description": "Snippet for creating default structure of a react component",
 		"prefix": ["component", "rc"],
 		"body": [
-			"import { FC } from 'react'",
-			"import { cn } from 'shared/utils/classNames'",
-			"import cls from './${TM_FILENAME_BASE}.module.scss'",
+			"import { FC } from 'react';",
+			"import { cn } from 'shared/utils/classNames';",
+			"import cls from './${TM_FILENAME_BASE}.module.scss';",
 			"",
 			"interface I${TM_FILENAME_BASE}Props {",
 			"\tclassName?: string;",

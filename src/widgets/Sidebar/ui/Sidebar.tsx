@@ -1,7 +1,7 @@
 import { FC, useCallback, useState } from 'react';
 import { cn } from 'shared/utils/classNames';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LangSwitcher } from 'widgets/LangSwitcher';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import cls from './Sidebar.module.scss';
 import { Button } from 'shared/ui/Button';
 

@@ -1,6 +1,7 @@
-@import './reset';
-@import './variables';
-@import './themes';
+@import 'reset';
+@import 'variables/global';
+@import 'themes/normal';
+@import 'themes/dark';
 
 #root {
     height: 100vh;

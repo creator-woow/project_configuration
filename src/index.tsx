@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from 'app/App';
-import { ThemeProvider } from 'app/providers';
+import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 import 'app/styles/index.scss';
 import 'shared/config/i18n';
 
@@ -11,7 +12,9 @@ const root = createRoot(container);
 root.render(
   <StrictMode>
     <ThemeProvider>
-      <App/>
+      <ErrorBoundary>
+        <App/>
+      </ErrorBoundary>
     </ThemeProvider>
   </StrictMode>
 );

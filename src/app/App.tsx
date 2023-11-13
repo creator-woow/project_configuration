@@ -1,16 +1,15 @@
-import { Suspense } from 'react';
 import { useTheme } from 'shared/hooks/useTheme';
 import { AppRouter } from 'app/router';
-import { AppLoader } from 'app/ui/AppLoader';
+import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 
 export const App = () => {
   const [theme] = useTheme();
 
   return (
     <div className={`app theme-${theme}`}>
-      <Suspense fallback={<AppLoader />}>
+      <ErrorBoundary>
         <AppRouter />
-      </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };

@@ -8,7 +8,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ru',
+    lng: 'en',
+    fallbackLng: 'en',
+    load: 'languageOnly',
     debug: __IS_DEV__
   });
 

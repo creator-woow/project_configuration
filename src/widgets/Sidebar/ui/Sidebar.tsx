@@ -7,17 +7,24 @@ import { Button } from 'shared/ui/Button';
 
 interface ISidebarProps {
   className?: string;
+  expanded?: boolean;
 }
 
+export const SIDEBAR_TEST_ID = 'sidebar';
+export const SIDEBAR_EXPANDER_ID = 'sidebar-expander';
+
 export const Sidebar: FC<ISidebarProps> = (props) => {
-  const { className } = props;
-  const [expanded, setExpanded] = useState(false);
+  const { className, expanded } = props;
+  const [isExpanded, setExpanded] = useState(expanded);
 
   const toggleExpanded = useCallback(() => setExpanded((prevState) => !prevState), []);
 
   return (
-    <aside className={cn(cls.sidebar, { [cls.expanded]: expanded }, [className])}>
-      <Button onClick={toggleExpanded}>
+    <aside
+      data-testid={SIDEBAR_TEST_ID}
+      className={cn(cls.sidebar, { [cls.expanded]: isExpanded }, [className])}
+    >
+      <Button onClick={toggleExpanded} data-testid={SIDEBAR_EXPANDER_ID}>
         t
       </Button>
       <div className={cls.switchers}>

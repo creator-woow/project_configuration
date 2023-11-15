@@ -1,3 +1,5 @@
+import path from 'path';
+
 export default {
   preset: 'ts-jest',
   rootDir: '../..',
@@ -10,11 +12,16 @@ export default {
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/'
   ],
-  testRegex: ['.test.ts$'],
+  testRegex: ['.test.tsx?$'],
   transform: {
     '.tsx?$': 'ts-jest'
   },
   transformIgnorePatterns: [
     '<rootDir>/node_modules/'
   ],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg$': path.resolve(__dirname, 'svgTransformer.tsx')
+  },
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setup.ts']
 };

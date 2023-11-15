@@ -1,4 +1,4 @@
-import { classNames } from './classNames';
+import { classNames } from './index';
 
 describe('className', () => {
   test('Dynamic true', () => {

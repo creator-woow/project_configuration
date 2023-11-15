@@ -3,7 +3,8 @@ import { cn } from 'shared/utils/classNames';
 import cls from './Button.module.scss';
 
 export enum ButtonView {
-  CLEAR = 'clear'
+  CLEAR = 'clear',
+  OUTLINED = 'outlined'
 }
 
 interface IButtonProps extends PropsWithChildren, ButtonHTMLAttributes<HTMLButtonElement> {

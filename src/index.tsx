@@ -4,7 +4,7 @@ import { App } from 'app/App';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import 'app/styles/index.scss';
-import 'shared/config/i18n';
+import 'shared/config/i18n/config';
 
 const container = document.querySelector('#root');
 const root = createRoot(container);

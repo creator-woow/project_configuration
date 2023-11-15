@@ -4,6 +4,7 @@ import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import cls from './Sidebar.module.scss';
 import { Button } from 'shared/ui/Button';
+import { useTranslation } from 'react-i18next';
 
 interface ISidebarProps {
   className?: string;
@@ -15,6 +16,7 @@ export const SIDEBAR_EXPANDER_ID = 'sidebar-expander';
 
 export const Sidebar: FC<ISidebarProps> = (props) => {
   const { className, expanded } = props;
+  const { t } = useTranslation();
   const [isExpanded, setExpanded] = useState(expanded);
 
   const toggleExpanded = useCallback(() => setExpanded((prevState) => !prevState), []);
@@ -25,7 +27,7 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
       className={cn(cls.sidebar, { [cls.expanded]: isExpanded }, [className])}
     >
       <Button onClick={toggleExpanded} data-testid={SIDEBAR_EXPANDER_ID}>
-        t
+        {t('sidebar.toggleButton')}
       </Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />

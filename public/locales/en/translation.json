@@ -5,5 +5,12 @@
   },
   "error": {
     "page-not-found": "Page was not found"
+  },
+  "pageError": {
+    "message": "Something went wrong, please try to reload page",
+    "reloadButton": "Reload"
+  },
+  "sidebar": {
+    "toggleButton": "Toggle"
   }
 }

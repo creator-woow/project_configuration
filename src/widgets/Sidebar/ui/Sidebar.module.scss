@@ -1,15 +1,11 @@
 .sidebar {
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));
-  transition: width ease .3s;
-  background-color: var(--bg-color-contrast);
+  background-color: var(--bg-color-app-contrast);
   display: flex;
   flex-direction: column;
   padding: 10px;
-}
-
-.expanded {
-  width: var(--sidebar-width-expanded);
+  position: relative;
 }
 
 .switchers {
@@ -18,4 +14,64 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.expandToggler {
+  position: absolute;
+  bottom: 40px;
+  right: -40px;
+}
+
+.navigation {
+  margin-bottom: 30px;
+}
+
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigationItem {
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.navigationLink {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (hover:hover) {
+    &:hover {
+      filter: brightness(0.6);
+    }
+  }
+}
+
+.linkText {
+  display: none;
+  opacity: 0;
+}
+
+.navigationIcon {
+  fill: var(--font-color-primary);
+}
+
+.expanded {
+  width: var(--sidebar-width-expanded);
+
+  .linkText {
+    visibility: visible;
+    opacity: 1;
+    margin-left: 10px;
+    display: initial;
+    width: auto;
+  }
+
+  .navigationList {
+    align-items: stretch;
+  }
 }

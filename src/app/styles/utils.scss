@@ -1,0 +1,13 @@
+@import "./variables/colors";
+
+@each $color in $bg-colors {
+  .bg-color-#{$color} {
+    background-color: var(--bg-color-#{$color});
+  }
+}
+
+@each $color in $text-colors {
+  .text-color-#{$color} {
+    color: var(--font-color-#{$color});
+  }
+}

@@ -5,24 +5,28 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  Client_check:
+  Client_Pipline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 20.x ]
     steps:
       - uses: actions/checkout@v4
-      - name: Start node ${{ matrix.node-version }}
+      - name: Starting node ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm install
+        if: always()
       - name: Lint project
         run: npm run lint
+        if: always()
       - name: Build project
         run: npm run build
-      - name: Check unit test
+        if: always()
+      - name: Check unit tests
         run: npm run test:unit
+        if: always()
       - name: Check screenshot tests
         run: npm run storybook:build && npm run test:screenshot:ci

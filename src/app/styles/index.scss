@@ -2,6 +2,7 @@
 @import 'variables/global';
 @import 'themes/normal';
 @import 'themes/dark';
+@import 'utils';
 
 #root {
     height: 100vh;
@@ -13,7 +14,7 @@
     width: 100%;
     font: var(--font-m);
     color: var(--font-color-primary);
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-app);
 }
 
 .page-content-wrapper {

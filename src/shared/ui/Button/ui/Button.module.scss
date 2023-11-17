@@ -14,5 +14,23 @@
 .view-outlined {
   background: transparent;
   border: 1px solid var(--color-primary);
-  padding: 15px 10px;
+}
+
+.view-filled {
+  border: none;
+}
+
+.size-s {
+  font: var(--font-s);
+  padding: 3px 5px;
+}
+
+.size-m {
+  font: var(--font-m);
+  padding: 6px 10px;
+}
+
+.size-l {
+  font: var(--font-l);
+  padding: 9px 15px;
 }

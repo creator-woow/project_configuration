@@ -9,6 +9,7 @@ interface IRenderComponentOptions {
 }
 
 
+// Wrapps component into router and i18n providers for jest isolated render
 export function renderComponent(component: ReactNode, options?: IRenderComponentOptions) {
   const {
     route = '/'

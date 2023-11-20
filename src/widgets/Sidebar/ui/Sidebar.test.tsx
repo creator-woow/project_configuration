@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import { renderComponent } from 'shared/utils/tests/renderComponent';
 import { Sidebar, SIDEBAR_EXPANDER_ID, SIDEBAR_TEST_ID } from './Sidebar';
 import styles from './Sidebar.module.scss';

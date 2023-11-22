@@ -3,17 +3,21 @@ import { BrowserRouter } from 'react-router-dom';
 import { Theme } from 'shared/context/ThemeContext';
 import 'app/styles/index.scss';
 import 'shared/config/i18n/config';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 
 const preview: Preview = {
   decorators: [
     (story, context) => {
       const theme = context.parameters.theme || context.globals.theme;
+
       return (
-        <div className={`app theme-${theme}`}>
-          <BrowserRouter>
-            {story()}
-          </BrowserRouter>
-        </div>
+        <ThemeProvider activeTheme={theme}>
+          <div className={`app ${theme}`}>
+            <BrowserRouter>
+              {story()}
+            </BrowserRouter>
+          </div>
+        </ThemeProvider>
       );
     }
   ],
@@ -25,8 +29,8 @@ const preview: Preview = {
         title: 'Theme',
         icon: 'circlehollow',
         items: [
-          { value: Theme.NORMAL, title: Theme.NORMAL.toUpperCase(), icon: 'circlehollow' },
-          { value: Theme.DARK, title: Theme.DARK.toUpperCase(), icon: 'circle' },
+          { value: Theme.NORMAL, title: 'Normal', icon: 'circlehollow' },
+          { value: Theme.DARK, title: 'Dark', icon: 'circle' },
           
         ],
         dynamicTitle: true

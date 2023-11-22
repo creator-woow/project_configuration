@@ -4,6 +4,10 @@
 @import 'themes/dark';
 @import 'utils';
 
+body {
+    font: var(--font-m);
+}
+
 #root {
     height: 100vh;
     width: 100vw;
@@ -12,9 +16,8 @@
 .app {
     min-height: 100vh;
     width: 100%;
-    font: var(--font-m);
-    color: var(--font-color-primary);
     background-color: var(--bg-color-app);
+    color: var(--font-color-primary);
 }
 
 .page-content-wrapper {

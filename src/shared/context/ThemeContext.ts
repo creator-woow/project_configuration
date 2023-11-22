@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
 export const enum Theme {
-  NORMAL = 'normal',
-  DARK = 'dark',
+  NORMAL = 'app-theme-normal',
+  DARK = 'app-theme-dark',
 }
 
 interface IContextState {

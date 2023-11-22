@@ -18,7 +18,7 @@ interface ISidebarProps {
 }
 
 export const SIDEBAR_TEST_ID = 'sidebar';
-export const SIDEBAR_EXPANDER_ID = 'sidebar-expander';
+export const SIDEBAR_EXPANDER_TEST_ID = 'sidebar-expander';
 
 export const Sidebar: FC<ISidebarProps> = (props) => {
   const { className, expanded } = props;
@@ -55,7 +55,7 @@ export const Sidebar: FC<ISidebarProps> = (props) => {
       <Button
         className={styles.expandToggler}
         onClick={toggleExpanded}
-        data-testid={SIDEBAR_EXPANDER_ID}
+        data-testid={SIDEBAR_EXPANDER_TEST_ID}
         backgroundColor={BackgroundColor.APP_CONTRAST}
         view={ButtonView.FILLED}
         size={ButtonSize.L}

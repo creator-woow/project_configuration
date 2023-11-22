@@ -10,7 +10,7 @@
     "test:screenshot": "npx loki test",
     "test:screenshot:ok": "npx loki approve",
     "test:screenshot:visual-diff": "npm run test:screenshot:json-diff && npm run test:screenshot:html-diff",
-    "test:screenshot:json-diff": "node scripts/generate-visual-report-json.js",
+    "test:screenshot:json-diff": "npx ts-node scripts/generate-visual-report-json.ts",
     "test:screenshot:html-diff": "reg-cli --from .loki/report.json --report .loki/report.html",
     "test:screenshot:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "lint": "npm run eslint && npm run stylelint",

@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { renderComponent } from 'shared/utils/tests/renderComponent';
-import { Sidebar, SIDEBAR_EXPANDER_ID, SIDEBAR_TEST_ID } from './Sidebar';
+import { Sidebar, SIDEBAR_EXPANDER_TEST_ID, SIDEBAR_TEST_ID } from './Sidebar';
 import styles from './Sidebar.module.scss';
 
 describe('Sidebar tests', () => {
@@ -12,7 +12,7 @@ describe('Sidebar tests', () => {
   test('Sidebar expands', () => {
     renderComponent(<Sidebar/>);
     expect(screen.getByTestId(SIDEBAR_TEST_ID)).toBeInTheDocument();
-    const expandButton = screen.getByTestId(SIDEBAR_EXPANDER_ID);
+    const expandButton = screen.getByTestId(SIDEBAR_EXPANDER_TEST_ID);
     fireEvent.click(expandButton);
     expect(screen.getByTestId(SIDEBAR_TEST_ID)).toHaveClass(styles.expanded);
   });

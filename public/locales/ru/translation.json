@@ -12,5 +12,8 @@
   },
   "sidebar": {
     "toggleButton": "Переключить"
+  },
+  "navbar": {
+    "login": "Войти"
   }
 }

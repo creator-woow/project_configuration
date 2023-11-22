@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react';
 import { cn } from 'shared/utils/classNames';
 import cls from './Button.module.scss';
-import { BackgroundColor } from 'shared/lib/colors';
+import { BackgroundColor, TextColor } from 'shared/lib/colors';
 
 export enum ButtonView {
   CLEAR = 'clear',
@@ -20,6 +20,7 @@ interface IButtonProps extends PropsWithChildren, ButtonHTMLAttributes<HTMLButto
   view?: ButtonView;
   size?: ButtonSize;
   backgroundColor?: BackgroundColor;
+  color?: TextColor;
 }
 
 export const Button: FC<IButtonProps> = (props) => {
@@ -29,6 +30,7 @@ export const Button: FC<IButtonProps> = (props) => {
     view = ButtonView.CLEAR,
     size = ButtonSize.M,
     backgroundColor,
+    color = TextColor.PRIMARY,
     onClick,
     ...otherProps
   } = props;
@@ -39,7 +41,11 @@ export const Button: FC<IButtonProps> = (props) => {
 
   return (
     <button
-      className={cn(cls.button, mods, [className, cls[`view-${view}`], cls[`size-${size}`]])}
+      className={cn(
+        cls.button,
+        mods,
+        [className, cls[`view-${view}`], cls[`size-${size}`], `text-color-${color}`])
+      }
       onClick={onClick}
       {...otherProps}
     >

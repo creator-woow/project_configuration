@@ -1,0 +1,21 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-index-modal);
+}
+
+.overlay {
+  background: var(--overlay-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background: var(--bg-color-app);
+  padding: 10px;
+  max-width: 70%;
+  color: var(--font-color-primary);
+}

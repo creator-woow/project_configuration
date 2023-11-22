@@ -6,7 +6,7 @@ export const App = () => {
   const [theme] = useTheme();
 
   return (
-    <div className={`app theme-${theme}`}>
+    <div className={`app ${theme}`}>
       <ErrorBoundary>
         <AppRouter />
       </ErrorBoundary>

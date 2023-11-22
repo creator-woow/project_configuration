@@ -12,5 +12,8 @@
   },
   "sidebar": {
     "toggleButton": "Toggle"
+  },
+  "navbar": {
+    "login": "Login"
   }
 }
